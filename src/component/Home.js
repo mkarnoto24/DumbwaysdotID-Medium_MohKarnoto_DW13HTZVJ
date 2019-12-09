@@ -116,7 +116,6 @@ class Header extends Component {
                     <div style={{ float: 'left', overflow: 'hidden', width: '30%' }}>
                         <img style={{
                             width: '100px',
-                            height: '100px',
 
                         }}
                             src={gbrtengah1} alt="gbr" />
