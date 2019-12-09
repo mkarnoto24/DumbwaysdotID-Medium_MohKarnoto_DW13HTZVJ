@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
-import Modal from './component/Modal';
+import Register from './component/Register';
 
 
 
@@ -67,9 +67,8 @@ class Content extends Component {
     return (
       <div className="App-content">
         <p>Welcome To DumbWays.id</p>
-        <Modal>
-        </Modal>
-
+        <Register>
+        </Register>
       </div>
 
     );
