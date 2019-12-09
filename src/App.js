@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import Register from './component/Register';
+import Home from './component/Home';
+import Login from './component/ModalLogin';
 
 
 
@@ -30,9 +32,10 @@ class App extends Component {
 
   render() {
 
+
     return (
       <div className="App">
-        <Header />
+        <Home />
         <Content />
       </div>
     );
@@ -52,23 +55,15 @@ class App extends Component {
   }*/
   }
 }
-class Header extends Component {
-  render() {
 
-    return (
-      <div>
-        <h1>This is Header</h1>
-      </div>
-    );
-  }
-}
 class Content extends Component {
   render() {
     return (
       <div className="App-content">
         <p>Welcome To DumbWays.id</p>
-        <Register>
-        </Register>
+        <Register />
+        <Login />
+
       </div>
 
     );

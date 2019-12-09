@@ -72,7 +72,7 @@ export default function TransitionsModal() {
     return (
         <div>
             <button type="button" onClick={handleOpen}>
-                react-transition-group
+                Login
             </button>
 
             <Modal
