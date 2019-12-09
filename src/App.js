@@ -60,7 +60,6 @@ class Content extends Component {
   render() {
     return (
       <div className="App-content">
-        <p>Welcome To DumbWays.id</p>
         <Register />
         <Login />
 
