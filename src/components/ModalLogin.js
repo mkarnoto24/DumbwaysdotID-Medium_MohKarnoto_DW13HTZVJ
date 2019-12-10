@@ -65,6 +65,14 @@ export default function TransitionsModal() {
         setOpen(true);
     };
 
+    const setData = () => {
+
+        localStorage.setItem('myData', 'disi dengan value');
+        var localst = localStorage.getItem('myData');
+        console.log(localst);
+    };
+
+
     const handleClose = () => {
         setOpen(false);
     };
@@ -107,8 +115,11 @@ export default function TransitionsModal() {
                                 <TextField
                                     label="Your Email"
                                     type="email"
+                                    id="idEmail"
                                 /><br />
-                                <Button className={classes.btn}><span className={classes.bntspan}>Continue</span></Button>
+                                <Button className={classes.btn}
+                                    onClick={setData}
+                                ><span className={classes.bntspan}>Continue</span></Button>
                             </form>
                             <p>
                                 <Link to="#" className={classes.signoption}><span><ArrowBackIosIcon fontSize="small" />All Sign In option</span></Link>

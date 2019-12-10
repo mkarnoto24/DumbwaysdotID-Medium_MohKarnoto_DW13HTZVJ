@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
 import gbratikelbsr from './gbrartikelbsr.jpeg';
-import gbrtengah1 from './gbrtengah1.jpg';
+import Articles from './Articles';
 import gbrtengah2 from './gbrtengah2.jpeg';
 import gbrtengah3 from './gbrtengah3.jpeg';
 import gbrkiri from './gbrkiri.jpeg';
@@ -100,6 +100,63 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const menus = [
+    {
+        id: 1,
+        name: "Home"
+    },
+    {
+        id: 2,
+        name: "Onezero"
+    },
+    {
+        id: 3,
+        name: "Elemental"
+    },
+    {
+        id: 4,
+        name: "Gen"
+    },
+    {
+        id: 5,
+        name: "Zora"
+    },
+    {
+        id: 6,
+        name: "forge"
+    },
+    {
+        id: 7,
+        name: "human"
+    },
+    {
+        id: 8,
+        name: "marker"
+    },
+    {
+        id: 9,
+        name: "level"
+    },
+    {
+        id: 10,
+        name: "heated"
+    },
+    {
+        id: 11,
+        name: "modus"
+    },
+    {
+        id: 11,
+        name: "more"
+    },
+];
+const articles = [
+    {
+        id: 1,
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    }]
+
 export default function Home() {
     const [open, setOpen] = React.useState(false);
     const [openlogin, setOpenLogin] = React.useState(false);
@@ -117,7 +174,6 @@ export default function Home() {
     const handleCloseLogin = () => {
         setOpenLogin(false);
     };
-
 
     const classes = useStyles();
 
@@ -140,18 +196,9 @@ export default function Home() {
             {/** START NAVBAR */}
             <Toolbar>
                 <nav>
-                    <Link className={classes.navbarlink} to="#">Home</Link>
-                    <Link className={classes.navbarlink} to="#">Onezero</Link>
-                    <Link className={classes.navbarlink} to="#">Elemntal</Link>
-                    <Link className={classes.navbarlink} to="#">Gen</Link>
-                    <Link className={classes.navbarlink} to="#">Zora</Link>
-                    <Link className={classes.navbarlink} to="#">Forge</Link>
-                    <Link className={classes.navbarlink} to="#">Human Parts</Link>
-                    <Link className={classes.navbarlink} to="#">mrker</Link>
-                    <Link className={classes.navbarlink} to="#">level</Link>
-                    <Link className={classes.navbarlink} to="#">heated</Link>
-                    <Link className={classes.navbarlink} to="#">modus</Link>
-                    <Link className={classes.navbarlink} to="#">more</Link>
+                    {
+                        menus.map(item => <Link className={classes.navbarlink} to="#">{item.name}</Link>)
+                    }
                 </nav>
             </Toolbar>
             {/** ====================END NAVBAR========================== */}
@@ -185,23 +232,13 @@ export default function Home() {
                         {/*END DIV FOR DATE ETC*/}
                     </Grid>
                     <Grid item xs={4}>
-                        <ul style={{ width: '100%', display: 'inline-flex', listStyle: 'none' }}>
-                            <li style={{ width: '30%' }}>
-                                <img style={{
-                                    width: '100px',
-                                    height: '110px',
+                        {articles.map(item =>
+                            <Articles
+                                title={item.title}
+                                subTitle={item.subTitle}
+                                infoDate={item.infoDate} />
+                        )}
 
-                                }}
-                                    src={gbrtengah1} alt="gbr" />
-                            </li>
-                            <li style={{ width: '70%', display: 'inline', listStyle: 'none', textAlign: 'justify' }}>
-                                <h5 style={{ margin: '0' }}
-                                >Hurt People Will Hurt People. But Healed People Heal People, Too.</h5>
-                                <p style={{ fontSize: '13px', wordSpacing: '0px', }}>
-                                    Courtney Christine in Human Parts<br />
-                                    <span style={{ opacity: '0.5' }}>Feb 19, 2017. 7 min read</span></p>
-                            </li>
-                        </ul>
                         <ul style={{ width: '100%', marginTop: '0', display: 'inline-flex', listStyle: 'none' }}>
                             <li style={{ width: '30%' }}>
                                 <img style={{
