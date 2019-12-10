@@ -11,9 +11,8 @@ import './style.css';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Link from '@material-ui/core/Link';
-import hlmlogin from './ModalLogin';
 
-const useStyles = makeStyles(theme => ({
+const useStyle = makeStyles(theme => ({
 
     modal: {
         margin: '0',
@@ -50,9 +49,9 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function TransitionsModal() {
+export default function Register() {
 
-    const classes = useStyles();
+    const classes = useStyle();
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {
@@ -73,7 +72,7 @@ export default function TransitionsModal() {
         <div>
             <button type="button" onClick={handleOpen}>
                 Create Account
-      </button>
+            </button>
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"

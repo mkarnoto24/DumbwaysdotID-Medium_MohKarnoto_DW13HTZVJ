@@ -49,11 +49,10 @@ const useStyles = makeStyles(theme => ({
         fontSize: '15px'
     },
     closeButton: {
-
         float: 'right',
         position: 'relative',
-        right: theme.spacing(1),
-        top: theme.spacing(1),
+        right: theme.spacing(),
+        top: theme.spacing(),
         color: theme.palette.grey[500],
     }
 }));
