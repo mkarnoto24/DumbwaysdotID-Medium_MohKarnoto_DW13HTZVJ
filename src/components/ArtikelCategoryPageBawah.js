@@ -6,7 +6,7 @@ export default class ArtikelCategoryPageBawah extends Component {
     render() {
         return (
             <div> <hr />
-                <Grid container spacing={2}>
+                <Grid container spacing={2} style={{ margin: '25px 0' }}>
                     <Grid item xs={7} style={{ textAlign: 'left' }}>
                         <div>
                             <Typography variant="h6">{this.props.title}</Typography>

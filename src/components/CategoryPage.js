@@ -131,7 +131,29 @@ const artikelcategorybawah = [
 
 
 ];
-
+// 
+const menulink = [
+    {
+        id: 1,
+        name: 'About OneZero',
+        href: '/onezero'
+    },
+    {
+        id: 2,
+        name: 'About Medium',
+        href: '/medium'
+    },
+    {
+        id: 3,
+        name: 'Terms',
+        href: '/terms'
+    },
+    {
+        id: 4,
+        name: 'Privacy',
+        href: '/privacy'
+    },
+];
 const artikelcategory = [
     {
         id: 1,
@@ -159,15 +181,15 @@ export default class CategoryPage extends Component {
         return (
             <div className="AppMedium">
                 {/* ========START TOPBAR AND HEDER ========= */}
-                <Toolbar>
+                <Toolbar style={{ boxShadow: '5px 5px 5px grey' }}>
                     <img src={gmbIcon} alt="icon-medium" />
                     <div className="grow">
-                        <SearchIcon></SearchIcon>
-                        <NotificationsNoneIcon />
-                        <Button variant="outlined" color="primary">Upgrade</Button>
+                        <SearchIcon style={{ margin: '0 15px' }}></SearchIcon>
+                        <NotificationsNoneIcon style={{ margin: '0 15px' }} />
+                        <Button style={{ marginLeft: '15px' }} variant="outlined" color="primary">Upgrade</Button>
                     </div>
                 </Toolbar>
-                <Toolbar>
+                <Toolbar className='appcontent'>
                     <img style={{
                         margin: '40px 30px',
                         width: '250px',
@@ -185,7 +207,7 @@ export default class CategoryPage extends Component {
                 {/* ========END TOPBAR AND HEDER ========= */}
 
                 {/* ========START CONTENT ========= */}
-                <div>
+                <div className='appcontent'>
                     {artikelcategory.map(item => <ArticleCategoryPage
                         title={item.title}
                         subTitle={item.subTitle}
@@ -195,7 +217,7 @@ export default class CategoryPage extends Component {
                     />)}
                 </div>
                 {/* ========END CONTENT ========= */}
-                <Grid container spacing={1}>
+                <Grid container spacing={1} style={{ width: '90%', margin: '0 auto' }} >
                     <Grid item lg={12} style={{ backgroundColor: '#f9fa9b', margin: '50px 0' }}>
                         <div>
                             <div style={{ margin: '20px 300px ' }}>
@@ -212,9 +234,9 @@ export default class CategoryPage extends Component {
                             </div>
                         </div>
                     </Grid>
-                </Grid>
+                </Grid >
 
-                <div style={{ width: '50%', margin: '0 auto' }}>
+                <div style={{ width: '50%', margin: '0 auto' }} className='appcontent'>
                     {artikelcategorybawah.map(item =>
                         <ArtikelCategoryPageBawah
                             title={item.title}
@@ -223,6 +245,14 @@ export default class CategoryPage extends Component {
                             infoDate={item.infoDate}
                             img={item.img}
                         />)}
+                    <hr></hr>
+                </div>
+                <hr></hr>
+                <div style={{ textAlign: 'right', margin: '30px 0 30px' }} className='appcontent'>
+                    {menulink.map(item =>
+                        <Link to={item.href} style={{ padding: '0 15px', opacity: '0.5' }}>{item.name}</Link>
+                    )}
+
                 </div>
             </div>
         );

@@ -9,10 +9,15 @@
   }
 }
 
+.appcontent {
+  margin: 0 auto;
+  width: 90%;
+}
+
 .AppMedium {
 
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   flex-grow: 1;
 
 }
