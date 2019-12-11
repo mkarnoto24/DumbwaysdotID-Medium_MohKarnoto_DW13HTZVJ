@@ -1,11 +1,34 @@
 import React, { Component } from 'react';
-import { Toolbar, Typography, Button, Link, Grid, Box } from '@material-ui/core';
+import { Toolbar, Typography, Button, Link, Grid, Box, GridList } from '@material-ui/core';
 import './../App.css';
 import gmbIcon from './icon_medium.jpeg';
 import gbrartikel_onezero1 from './gbrartikel_onezero1.jpeg';
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import icononezero from './onezero.jpeg';
+import ArticleCategoryPage from './ArtikelCategoryPage';
+
+const artikelcategory = [
+    {
+        id: 1,
+        img: gbrartikel_onezero1,
+        title: 'The Influencer and the Hit Man',
+        subTitle: 'How a years-long domain name feud ended in a bloody shootout',
+        author: 'Ian Frisch',
+        infoDate: 'Dec 10. 24 min read'
+
+    },
+    {
+        id: 2,
+        img: gbrartikel_onezero1,
+        title: 'The Influencer and the Hit Man',
+        subTitle: 'How a years-long domain name feud ended in a bloody shootout',
+        author: 'Ian Frisch',
+        infoDate: 'Dec 10. 24 min read'
+
+    },
+
+];
 
 export default class CategoryPage extends Component {
     render() {
@@ -39,112 +62,33 @@ export default class CategoryPage extends Component {
 
                 {/* ========START CONTENT ========= */}
                 <div>
-
-
-                    {/* <Box display="flex" flexDirection="row" bgcolor="background.paper">
-                        <Box width="60%">
-
-                            <img
-                                style={{
-                                    width: '100%',
-                                    height: '50%',
-                                    marginTop: '20px'
-                                }}
-
-                                src={gbrartikel_onezero1} alt="gbr-artikel" />
-
-                        </Box>
-                        <Box width="40%">
-                            <div style={{
-                                backgroundColor: '#46b3e6',
-                                width: '100%',
-                                height: '50%',
-                                textAlign: 'center'
-                            }}>
-                                <h1 style={{
-                                    paddingTop: '30px'
-                                }}
-                                >The Influencer and the Hit Man</h1>
-                                <div>
-                                    <p>How a years-long domain name feud ended in a bloody shootout</p>
-                                    <span>Ian Frisch</span><br></br>
-                                    <span>Dec 10. 24 min read</span>
-                                </div>
-                            </div>
-                        </Box>
-                    </Box> */}
-                    {/* <Grid container spacing={1}>
-                        <Grid item xs={12}>
-                            <Box
-                                display="flex"
-                                flexWrap="wrap"
-                                alignContent="flex-start"
-                            >
-                                <Box>
-                                    <img
-                                        style={{
-                                            width: '50%',
-                                            height: '50%',
-                                            marginTop: '20px'
-                                        }}
-
-                                        src={gbrartikel_onezero1} alt="gbr-artikel" />
-
-                                </Box>
-                                <Box width="40%">
-                                    <div style={{
-                                        backgroundColor: '#46b3e6',
-                                        width: '100%',
-                                        height: '50%',
-                                        textAlign: 'center',
-                                        marginTop: '10px'
-                                    }}>
-                                        <h1 style={{
-                                            paddingTop: '30px'
-                                        }}
-                                        >The Influencer and the Hit Man</h1>
-                                        <div>
-                                            <p>How a years-long domain name feud ended in a bloody shootout</p>
-                                            <span>Ian Frisch</span><br></br>
-                                            <span>Dec 10. 24 min read</span>
-                                        </div>
-                                    </div>
-                                </Box>
-                                <Box width="60%">
-                                    <img
-                                        style={{
-                                            width: '100%',
-                                            height: '50%',
-                                            marginTop: '20px'
-                                        }}
-
-                                        src={gbrartikel_onezero1} alt="gbr-artikel" />
-
-                                </Box>
-                                <Box width="40%">
-                                    <div style={{
-                                        backgroundColor: '#46b3e6',
-                                        width: '100%',
-                                        height: '50%',
-                                        textAlign: 'center',
-                                        marginTop: '10px'
-                                    }}>
-                                        <h1 style={{
-                                            paddingTop: '30px'
-                                        }}
-                                        >The Influencer and the Hit Man</h1>
-                                        <div>
-                                            <p>How a years-long domain name feud ended in a bloody shootout</p>
-                                            <span>Ian Frisch</span><br></br>
-                                            <span>Dec 10. 24 min read</span>
-                                        </div>
-                                    </div>
-                                </Box>
-                            </Box>
-                        </Grid>
-                    </Grid> */}
+                    {artikelcategory.map(item => <ArticleCategoryPage
+                        title={item.title}
+                        subTitle={item.subTitle}
+                        author={item.author}
+                        infoDate={item.infoDate}
+                        img={item.img}
+                    />)}
                 </div>
                 {/* ========END CONTENT ========= */}
+                <Grid container spacing={1}>
+                    <Grid item lg={12} style={{ backgroundColor: '#f9fa9b', margin: '50px 0' }}>
+                        <div>
+                            <div style={{ margin: '20px 300px ' }}>
+                                <Typography variant="h5" component="h3">
+                                    "We have a few new things to share."
+                            </Typography>
+                                <p style={{ margin: '0' }}>-Damon Beres</p>
+
+                            </div>
+                            <div style={{ margin: '20px 300px ' }}>
+
+                                <Typography variant="h6">Welcome to a Refreshed OneZerohy</Typography >
+                                <p style={{ margin: '0' }}>Dec 3 . 2 min read</p>
+                            </div>
+                        </div>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
