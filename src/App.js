@@ -17,11 +17,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        {
-          <CategoryPage />
-        /* <Home />
+
+        {/* // <CategoryPage /> */}
+        <Home />
         <Content />
-        <Category /> */}
+        <Category />
       </div>
     );
   }

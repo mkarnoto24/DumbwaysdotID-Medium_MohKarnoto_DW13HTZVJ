@@ -184,12 +184,14 @@ export default function Home() {
                 <Typography className={classes.title} variant="h5" noWrap>
                     Medium
                 </Typography>
-                <div className={classes.grow} /><SearchIcon style={{ height: '15px' }}></SearchIcon>
-                <p className={classes.titleright}>Become a Member
-                <span><Link to="#" onClick={handleOpenLogin} style={{
-                        cursor: 'pointer',
-                    }}> Sign In </Link></span>
-                    <Button variant='outlined' color='primary' onClick={handleOpen}> Get Started</Button></p>
+                <div className={classes.grow} ><SearchIcon style={{ height: '15px' }}></SearchIcon>
+                    <p className={classes.titleright}>Become a Member
+                    <span>
+                            <Link to="#" onClick={handleOpenLogin} style={{
+                                cursor: 'pointer',
+                            }}> Sign In </Link></span>
+                        <Button variant='outlined' color='primary' onClick={handleOpen}> Get Started</Button></p>
+                </div>
             </Toolbar>
             {/** END HEADER */}
 
