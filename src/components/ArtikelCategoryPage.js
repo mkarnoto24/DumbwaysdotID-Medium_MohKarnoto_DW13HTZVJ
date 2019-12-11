@@ -62,7 +62,9 @@ export default class ArticleCategoryPage extends Component {
                             src={this.props.img} alt="gbr-artikel" />
                     </div>
 
-                </Grid> </div>
+                </Grid>
+
+            </div>
         );
     }
 }
