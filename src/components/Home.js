@@ -89,6 +89,43 @@ const useStyles = makeStyles(theme => ({
         fontSize: '15px'
     },
 }));
+
+//link bawah
+const linkbawah = [
+    {
+        id: 1,
+        name: 'Help'
+    },
+    {
+        id: 2,
+        name: 'Status'
+    },
+    {
+        id: 3,
+        name: 'Writer'
+    },
+    {
+        id: 4,
+        name: 'Blog'
+    },
+    {
+        id: 5,
+        name: 'Careers'
+    },
+    {
+        id: 6,
+        name: 'Privacy'
+    },
+    {
+        id: 7,
+        name: 'Terms'
+    },
+    {
+        id: 8,
+        name: 'About'
+    },
+];
+
 // const artikel atas tengah
 const articles = [
     {
@@ -271,67 +308,38 @@ export default function Home() {
 
                         </Typography>
                         <hr />
-                        <Grid container spacing={2}>
-                            <Grid item sm={2}>
-                                <h2 style={{ opacity: '0.4' }}>01</h2>
-                            </Grid>
-                            <Grid item sm={10} style={{ textAlign: 'justify' }}>
-                                <div><h4>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</h4></div>
-                                <span style={{ fontSize: '13px' }}> Corinne Purtill in OneZero</span><br />
-                                <span style={{ fontSize: '13px', opacity: '0.4', }}> Nov 26. 6 min read</span>
 
-                            </Grid>
-                            <Grid item sm={2}>
-                                <h2 style={{ opacity: '0.4' }}>02</h2>
-                            </Grid>
-                            <Grid item sm={10} style={{ textAlign: 'justify' }}>
-                                <div><h4>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</h4></div>
-                                <div><span style={{ fontSize: '13px' }}> Corinne Purtill in OneZero</span><br />
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}> Nov 26. 6 min read</span></div>
+                        {
+                            articlesBawahTengah.map(item =>
+                                <div>
+                                    <Grid container spacing={2}>
+                                        <Grid item sm={2}>
+                                            <h2 style={{ opacity: '0.4' }}>{item.no}</h2>
+                                        </Grid>
+                                        <Grid item sm={10} style={{ textAlign: 'justify' }}>
+                                            <div><h4>{item.title}</h4></div>
+                                            <span style={{ fontSize: '13px' }}> {item.subTitle}</span><br />
+                                            <span style={{ fontSize: '13px', opacity: '0.4', }}> {item.infoDate}</span>
 
-                            </Grid>
-                            <Grid item sm={2}>
-                                <h2 style={{ opacity: '0.4' }}>03</h2>
-                            </Grid>
-                            <Grid item sm={10} style={{ textAlign: 'justify' }}>
-                                <div><h4>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</h4></div>
-                                <div><span style={{ fontSize: '13px' }}> Corinne Purtill in OneZero</span><br />
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}> Nov 26. 6 min read</span></div>
+                                        </Grid>
+                                    </Grid>
+                                </div>)}
 
-                            </Grid>
-                            <Grid item sm={2}>
-                                <h2 style={{ opacity: '0.4' }}>04</h2>
-                            </Grid>
-                            <Grid item sm={10} style={{ textAlign: 'justify' }}>
-                                <div><h4>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</h4></div>
-                                <div><span style={{ fontSize: '13px' }}> Corinne Purtill in OneZero</span><br />
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}> Nov 26. 6 min read</span></div>
 
-                            </Grid>
-                            <Grid item sm={2}>
-                                <h2 style={{ opacity: '0.4' }}>05</h2>
-                            </Grid>
-                            <Grid item sm={10} style={{ textAlign: 'justify' }}>
-                                <div><h4>A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades</h4></div>
-                                <div><span style={{ fontSize: '13px' }}> Corinne Purtill in OneZero</span><br />
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}> Nov 26. 6 min read</span></div>
 
-                            </Grid>
-
-                        </Grid>
                         <hr style={{ opacity: '0.3' }} />
+                        {/* ====== START MENU LINK BAWAH==== */}
                         <Grid item sm={12}>
                             <div style={{ textAlign: 'justify' }}>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Help</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Status</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Writer</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Blog</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Careers</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Pivacy</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">Terms</Link>
-                                <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">About</Link>
+                                {
+                                    linkbawah.map(item =>
+                                        <Link style={{ fontSize: '13px', opacity: '0.5', float: 'left', margin: '8px' }} to="#">{item.name}</Link>)
+                                }
+
+
                             </div>
                         </Grid>
+                        {/* ====== START MENU LINK BAWAH==== */}
 
                     </Grid>
                     <Grid item xs={1}>
