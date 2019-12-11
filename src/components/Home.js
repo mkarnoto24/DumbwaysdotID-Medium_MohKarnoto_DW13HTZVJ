@@ -8,6 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
 import gbratikelbsr from './gbrartikelbsr.jpeg';
 import Articles from './Articles';
+import gbrtengah1 from './gbrtengah1.jpg';
 import gbrtengah2 from './gbrtengah2.jpeg';
 import gbrtengah3 from './gbrtengah3.jpeg';
 import gbrkiri from './gbrkiri.jpeg';
@@ -21,6 +22,8 @@ import './style.css';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import Category from './Category';
+
 
 const useStyles = makeStyles(theme => ({
     modal: {
@@ -56,12 +59,8 @@ const useStyles = makeStyles(theme => ({
         top: theme.spacing(),
         color: theme.palette.grey[500],
     },
-    root: {
-        textAlign: 'center',
-    },
     grow: {
         flexGrow: 1,
-        marginLeft: '15%',
     },
     title: {
         display: 'none',
@@ -71,16 +70,7 @@ const useStyles = makeStyles(theme => ({
 
     },
     titleright: {
-        marginRight: '15%',
         fontSize: '13px',
-        alignItems: 'center'
-    },
-    navbarlink: {
-        padding: '15px',
-        textTransform: 'uppercase',
-        fontSize: '13px',
-        textDecoration: 'none',
-        cursor: 'pointer',
     },
     populer: {
         textAlign: 'left'
@@ -99,63 +89,77 @@ const useStyles = makeStyles(theme => ({
         fontSize: '15px'
     },
 }));
-
-const menus = [
-    {
-        id: 1,
-        name: "Home"
-    },
-    {
-        id: 2,
-        name: "Onezero"
-    },
-    {
-        id: 3,
-        name: "Elemental"
-    },
-    {
-        id: 4,
-        name: "Gen"
-    },
-    {
-        id: 5,
-        name: "Zora"
-    },
-    {
-        id: 6,
-        name: "forge"
-    },
-    {
-        id: 7,
-        name: "human"
-    },
-    {
-        id: 8,
-        name: "marker"
-    },
-    {
-        id: 9,
-        name: "level"
-    },
-    {
-        id: 10,
-        name: "heated"
-    },
-    {
-        id: 11,
-        name: "modus"
-    },
-    {
-        id: 11,
-        name: "more"
-    },
-];
+// const artikel atas tengah
 const articles = [
     {
         id: 1,
+        imge: gbrtengah1,
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
         infoDate: 'Feb 19, 2017. 7 min read'
-    }]
+    },
+    {
+        id: 2,
+        imge: gbrtengah2,
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    },
+    {
+        id: 3,
+        imge: gbrtengah3,
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    }
+];
+// artikel populer on medium
+
+const articlesBawahTengah = [
+    {
+        id: 1,
+        no: '01',
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    },
+    {
+        id: 2,
+        no: '02',
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    },
+    {
+        id: 3,
+        no: '03',
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    },
+    {
+        id: 1,
+        no: '04',
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    },
+    {
+        id: 2,
+        no: '05',
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    },
+    {
+        id: 3,
+        no: '06',
+        title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
+        subTitle: ' Courtney Christine in Human Parts',
+        infoDate: 'Feb 19, 2017. 7 min read'
+    }
+];
+
 
 export default function Home() {
     const [open, setOpen] = React.useState(false);
@@ -184,7 +188,7 @@ export default function Home() {
                 <Typography className={classes.title} variant="h5" noWrap>
                     Medium
                 </Typography>
-                <div className={classes.grow} /><SearchIcon style={{ height: '15px' }}></SearchIcon>
+                <div className={classes.grow} /><SearchIcon style={{ height: '18px' }}></SearchIcon>
                 <p className={classes.titleright}>Become a Member
                 <span><Link to="#" onClick={handleOpenLogin} style={{
                         cursor: 'pointer',
@@ -194,17 +198,12 @@ export default function Home() {
             {/** END HEADER */}
 
             {/** START NAVBAR */}
-            <Toolbar>
-                <nav>
-                    {
-                        menus.map(item => <Link className={classes.navbarlink} to="#">{item.name}</Link>)
-                    }
-                </nav>
-            </Toolbar>
+
+            <Category></Category>
             {/** ====================END NAVBAR========================== */}
 
             {/** ====================START TOP ARTICLE ========================== */}
-            <div className={classes.root}>
+            <div>
                 {/** ====================START TOPRIGHT ARTICLE ========================== */}
                 <Grid container spacing={3}>
                     <Grid item xs={4}>
@@ -231,62 +230,28 @@ export default function Home() {
                         </div>
                         {/*END DIV FOR DATE ETC*/}
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={5}>
                         {articles.map(item =>
                             <Articles
+                                img={item.imge}
                                 title={item.title}
                                 subTitle={item.subTitle}
                                 infoDate={item.infoDate} />
                         )}
-
-                        <ul style={{ width: '100%', marginTop: '0', display: 'inline-flex', listStyle: 'none' }}>
-                            <li style={{ width: '30%' }}>
-                                <img style={{
-                                    width: '100px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah2} alt="gbr" />
-                            </li>
-                            <li style={{ width: '70%', display: 'inline', listStyle: 'none', textAlign: 'justify' }}>
-                                <h5 style={{ margin: '0' }}
-                                >Hurt People Will Hurt People. But Healed People Heal People, Too.</h5>
-                                <p style={{ fontSize: '13px', wordSpacing: '0px', }}>
-                                    Courtney Christine in Human Parts<br />
-                                    <span style={{ opacity: '0.5' }}>Feb 19, 2017. 7 min read</span></p>
-                            </li>
-                        </ul>
-                        <ul style={{ width: '100%', marginTop: '0', display: 'inline-flex', listStyle: 'none' }}>
-                            <li style={{ width: '30%' }}>
-                                <img style={{
-                                    width: '100px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </li>
-                            <li style={{ width: '70%', display: 'inline', listStyle: 'none', textAlign: 'justify' }}>
-                                <h5 style={{ margin: '0' }}
-                                >Hurt People Will Hurt People. But Healed People Heal People, Too.</h5>
-                                <p style={{ fontSize: '13px', wordSpacing: '0px', }}>
-                                    Courtney Christine in Human Parts<br />
-                                    <span style={{ opacity: '0.5' }}>Feb 19, 2017. 7 min read</span></p>
-                            </li>
-                        </ul>
                     </Grid>
                     {/** ====================END TOPRIGHT ARTICLE ========================== */}
 
                     {/** ====================START TOPLEFT ARTICLE ========================== */}
-                    <Grid item xs={4}>
+                    <Grid item xs={3}>
                         <img style={{
-                            width: '75%',
+                            width: '100%',
                             height: '150px',
                             paddingTop: '15px'
 
                         }}
                             src={gbrkiri} alt="gbr" />
                         <div>
-                            <h5 style={{ width: '75%', marginBottom: '0', textAlign: 'justify' }}>
+                            <h5 style={{ marginBottom: '0', textAlign: 'justify' }}>
                                 900,000 Americans Tell Google They Want to Try, Buy, or Quit Heroin Every Year
                             </h5>
                             <p style={{ fontSize: '13px', opacity: '0.5' }}>On Sex, Solitude, and female friendship</p>

@@ -1,39 +1,112 @@
-import React, { Component } from "react";
-import { Link, Toolbar } from '@material-ui/core';
+import React, { Component } from 'react';
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { Link } from 'react-router-dom';
 
-const classes = {
-    navbarlink: {
-        padding: '15px',
-        textTransform: 'uppercase',
-        fontSize: '13px',
-        textDecoration: 'none',
-        cursor: 'pointer',
-    }
+import './../App.css'
+
+const listMenu = [
+    {
+        id: 1,
+        name: 'home',
+        linkto: 'tsest'
+    },
+    {
+        id: 2,
+        name: 'onezero'
+    },
+    {
+        id: 3,
+        name: 'elemental'
+    },
+    {
+        id: 4,
+        name: 'gen'
+    },
+    {
+        id: 5,
+        name: 'zora'
+    },
+    {
+        id: 6,
+        name: 'forge'
+    },
+    {
+        id: 7,
+        name: 'human parts'
+    },
+    {
+        id: 8,
+        name: 'marker'
+    },
+    {
+        id: 9,
+        name: 'level'
+    },
+    {
+        id: 10,
+        name: 'heated'
+    },
+    {
+        id: 11,
+        name: 'modus'
+    },
+    {
+        id: 12,
+        name: 'more'
+    },
+];
+
+const MenuItem = ({ text, selected, link }) => {
+    return <a href={link}
+        className={`menu-item ${selected ? 'active' : ''}`}>{text}
+    </a>
+};
+
+export const Menu = (list, selected) =>
+    list.map(el => {
+        const { name } = el;
+        return <MenuItem text={name} key={name} selected={selected} />
+    })
+
+
+const Arrow = ({ text, className }) => {
+    return (
+        <div className={className}>{text}</div>
+    );
 }
 
-class Category extends Component {
+const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
+const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
 
+
+const selected = 'home';
+
+
+export default class Category extends Component {
+    constructor(props) {
+        super(props);
+        this.menuItems = Menu(listMenu, selected);
+    }
+    state = {
+        selected,
+        transition: 1,
+    };
+    onSelect = key => {
+        this.setState({ selected: key });
+    }
     render() {
+        const { selected } = this.state;
+        const menu = this.menuItems;
         return (
-            <div>
-                <Toolbar>
-                    <nav>
-                        <Link style={classes.navbarlink} to="#">Home</Link>
-                        <Link style={classes.navbarlink} to="#">Onezero</Link>
-                        <Link style={classes.navbarlink} to="#">Elemntal</Link>
-                        <Link style={classes.navbarlink} to="#">Gen</Link>
-                        <Link style={classes.navbarlink} to="#">Zora</Link>
-                        <Link style={classes.navbarlink} to="#">Forge</Link>
-                        <Link style={classes.navbarlink} to="#">Human Parts</Link>
-                        <Link style={classes.navbarlink} to="#">mrker</Link>
-                        <Link style={classes.navbarlink} to="#">level</Link>
-                        <Link style={classes.navbarlink} to="#">heated</Link>
-                        <Link style={classes.navbarlink} to="#">modus</Link>
-                        <Link style={classes.navbarlink} to="#">more</Link>
-                    </nav>
-                </Toolbar>
+            <div className="AppCategory">
+                <ScrollMenu
+                    data={menu}
+                    arrowLeft={ArrowLeft}
+                    arrowRight={ArrowRight}
+                    selected={selected}
+                    onSelect={this.onSelect}
+                />
             </div>
         );
     }
 }
-export default Category;

@@ -15,10 +15,9 @@ class App extends Component {
 
 
     return (
+
       <div className="App">
         <Home />
-        <Content />
-        <Category />
       </div>
     );
   }
@@ -28,8 +27,8 @@ class Content extends Component {
   render() {
     return (
       <div className="App-content">
-        <Register />
-        <Login />
+        {/* <Register />
+        <Login /> */}
 
       </div>
 

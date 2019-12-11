@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import gbrtengah1 from './gbrtengah1.jpg';
+
 
 
 export default class Articles extends Component {
@@ -13,14 +13,14 @@ export default class Articles extends Component {
                             height: '110px',
 
                         }}
-                            src={gbrtengah1} alt="gbr" />
+                            src={this.props.img} alt="gbr" />
                     </li>
                     <li style={{ width: '70%', display: 'inline', listStyle: 'none', textAlign: 'justify' }}>
                         <h5 style={{ margin: '0' }}
                         >{this.props.title}</h5>
                         <p style={{ fontSize: '13px', wordSpacing: '0px', }}>
-                            Courtney Christine in Human Parts<br />
-                            <span style={{ opacity: '0.5' }}>Feb 19, 2017. 7 min read</span></p>
+                            {this.props.subTitle}<br />
+                            <span style={{ opacity: '0.5' }}>{this.props.infoDate}</span></p>
                     </li>
                 </ul>
             </div>
