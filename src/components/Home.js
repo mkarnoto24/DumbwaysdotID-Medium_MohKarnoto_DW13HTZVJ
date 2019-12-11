@@ -23,7 +23,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Category from './Category';
-
+import ArticleKanan from './ArticleKanan';
 
 const useStyles = makeStyles(theme => ({
     modal: {
@@ -123,6 +123,67 @@ const linkbawah = [
     {
         id: 8,
         name: 'About'
+    },
+];
+
+//artikelbawahkanan
+
+const articlekanan = [
+    {
+        id: 1,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
+    },
+    {
+        id: 2,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
+    },
+    {
+        id: 3,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
+    },
+    {
+        id: 4,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
+    },
+    {
+        id: 5,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
+    },
+    {
+        id: 6,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
+    },
+    {
+        id: 7,
+        img: gbrtengah3,
+        title: 'Alexa Is My Problematic Fave',
+        subTitle: 'The mysterious allure of the original Amazon Echo',
+        author: 'Megan Morrone in OneZero',
+        infoDate: 'Dec 9. 6 min read'
     },
 ];
 
@@ -320,7 +381,6 @@ export default function Home() {
                                             <div><h4>{item.title}</h4></div>
                                             <span style={{ fontSize: '13px' }}> {item.subTitle}</span><br />
                                             <span style={{ fontSize: '13px', opacity: '0.4', }}> {item.infoDate}</span>
-
                                         </Grid>
                                     </Grid>
                                 </div>)}
@@ -346,126 +406,15 @@ export default function Home() {
 
                     </Grid>
                     <Grid item xs={7} style={{ textAlign: 'justify' }}>
-                        <Grid container spacing={2}>
-                            <Grid item sm={8}>
-                                <div>
-                                    <span><h3 style={{ margin: '0' }}>Alexa Is My Problematic Fave</h3></span>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>The mysterious allure of the original Amazon Echo</span><p></p>
-                                </div>
-                                <div>
-                                    <span style={{ fontSize: '13px', }}>Megan Morrone in OneZero</span><br></br>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>Dec 9. 6 min read</span>
-                                </div>
-                            </Grid>
-                            <Grid item sm={3}>
-                                <img style={{
-                                    width: '130px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={2}>
-                            <Grid item sm={8}>
-                                <div>
-                                    <span><h3 style={{ margin: '0' }}>Alexa Is My Problematic Fave</h3></span>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>The mysterious allure of the original Amazon Echo</span><p></p>
-                                </div>
-                                <div>
-                                    <span style={{ fontSize: '13px', }}>Megan Morrone in OneZero</span><br></br>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>Dec 9. 6 min read</span>
-                                </div>
-                            </Grid>
-                            <Grid item sm={3}>
-                                <img style={{
-                                    width: '130px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={2}>
-                            <Grid item sm={8}>
-                                <div>
-                                    <span><h3 style={{ margin: '0' }}>Alexa Is My Problematic Fave</h3></span>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>The mysterious allure of the original Amazon Echo</span><p></p>
-                                </div>
-                                <div>
-                                    <span style={{ fontSize: '13px', }}>Megan Morrone in OneZero</span><br></br>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>Dec 9. 6 min read</span>
-                                </div>
-                            </Grid>
-                            <Grid item sm={3}>
-                                <img style={{
-                                    width: '130px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={2}>
-                            <Grid item sm={8}>
-                                <div>
-                                    <span><h3 style={{ margin: '0' }}>Alexa Is My Problematic Fave</h3></span>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>The mysterious allure of the original Amazon Echo</span><p></p>
-                                </div>
-                                <div>
-                                    <span style={{ fontSize: '13px', }}>Megan Morrone in OneZero</span><br></br>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>Dec 9. 6 min read</span>
-                                </div>
-                            </Grid>
-                            <Grid item sm={3}>
-                                <img style={{
-                                    width: '130px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={2}>
-                            <Grid item sm={8}>
-                                <div>
-                                    <span><h3 style={{ margin: '0' }}>Alexa Is My Problematic Fave</h3></span>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>The mysterious allure of the original Amazon Echo</span><p></p>
-                                </div>
-                                <div>
-                                    <span style={{ fontSize: '13px', }}>Megan Morrone in OneZero</span><br></br>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>Dec 9. 6 min read</span>
-                                </div>
-                            </Grid>
-                            <Grid item sm={3}>
-                                <img style={{
-                                    width: '130px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={2}>
-                            <Grid item sm={8}>
-                                <div>
-                                    <span><h3 style={{ margin: '0' }}>Alexa Is My Problematic Fave</h3></span>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>The mysterious allure of the original Amazon Echo</span><p></p>
-                                </div>
-                                <div>
-                                    <span style={{ fontSize: '13px', }}>Megan Morrone in OneZero</span><br></br>
-                                    <span style={{ fontSize: '13px', opacity: '0.4', }}>Dec 9. 6 min read</span>
-                                </div>
-                            </Grid>
-                            <Grid item sm={3}>
-                                <img style={{
-                                    width: '130px',
-                                    height: '110px',
-
-                                }}
-                                    src={gbrtengah3} alt="gbr" />
-                            </Grid>
-                        </Grid>
+                        {/* <ArticleKanan /> */}
+                        {articlekanan.map(item =>
+                            <ArticleKanan
+                                title={item.title}
+                                subTitle={item.subTitle}
+                                author={item.author}
+                                infoDate={item.infoDate}
+                                img={item.img}
+                            />)}
                     </Grid>
                 </Grid>
             </div>
