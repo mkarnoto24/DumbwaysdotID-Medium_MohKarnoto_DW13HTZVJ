@@ -5,6 +5,7 @@ import Register from './components/Register';
 import Home from './components/Home';
 import Login from './components/ModalLogin';
 import Category from './components/Category';
+import CategoryPage from './components/CategoryPage';
 
 
 
@@ -16,9 +17,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Home />
+        {
+          <CategoryPage />
+        /* <Home />
         <Content />
-        <Category />
+        <Category /> */}
       </div>
     );
   }
