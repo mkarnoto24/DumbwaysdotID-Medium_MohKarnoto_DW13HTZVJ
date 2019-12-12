@@ -8,7 +8,7 @@ const listMenu = [
     {
         id: 1,
         name: 'home',
-        linkto: 'tsest'
+        linkto: '/Home'
     },
     {
         id: 2,
@@ -56,16 +56,16 @@ const listMenu = [
     },
 ];
 
-const MenuItem = ({ text, selected, link }) => {
-    return <a href={link}
-        className={`menu-item ${selected ? 'active' : ''}`}>{text}
-    </a>
+const MenuItem = ({ text, selected }) => {
+    return <div
+        className={`menu-item ${selected ? 'active' : ''}`}
+    >{text}</div>;
 };
 
-export const Menu = (list, selected) =>
-    list.map(el => {
-        const { name } = el;
-        return <MenuItem text={name} key={name} selected={selected} />
+export const Menu = (listMenu, selected) =>
+    listMenu.map(el => {
+        const { name, linkto } = el;
+        return <Link to={linkto}><MenuItem text={name} key={name} selected={selected} /></Link>
     })
 
 
