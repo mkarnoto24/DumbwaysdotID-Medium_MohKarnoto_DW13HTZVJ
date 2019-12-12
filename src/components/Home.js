@@ -194,21 +194,24 @@ const articles = [
         imge: gbrtengah1,
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
-        infoDate: 'Feb 19, 2017. 7 min read'
+        infoDate: 'Feb 19, 2017. 7 min read',
+        href: '/ArtikelDetail/1'
     },
     {
         id: 2,
         imge: gbrtengah2,
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
-        infoDate: 'Feb 19, 2017. 7 min read'
+        infoDate: 'Feb 19, 2017. 7 min read',
+        href: '/ArtikelDetail/2'
     },
     {
         id: 3,
         imge: gbrtengah3,
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
-        infoDate: 'Feb 19, 2017. 7 min read'
+        infoDate: 'Feb 19, 2017. 7 min read',
+        href: '/ArtikelDetail/3'
     }
 ];
 // artikel populer on medium
@@ -240,21 +243,21 @@ const articlesBawahTengah = [
         no: '04',
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
-        infoDate: 'Feb 19, 2017. 7 min read'
+        infoDate: 'Feb 19, 2017. 7 min read',
     },
     {
         id: 2,
         no: '05',
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
-        infoDate: 'Feb 19, 2017. 7 min read'
+        infoDate: 'Feb 19, 2017. 7 min read',
     },
     {
         id: 3,
         no: '06',
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
-        infoDate: 'Feb 19, 2017. 7 min read'
+        infoDate: 'Feb 19, 2017. 7 min read',
     }
 ];
 
@@ -302,7 +305,7 @@ export default function Home() {
 
             {/** ====================START TOP ARTICLE ========================== */}
             <div>
-                {/** ====================START TOPRIGHT ARTICLE ========================== */}
+                {/** ====================START TOPLEFT ARTICLE ========================== */}
                 <Grid container spacing={3}>
                     <Grid item xs={4}>
                         <div style={{ marginTop: '13px' }}>
@@ -334,12 +337,13 @@ export default function Home() {
                                 img={item.imge}
                                 title={item.title}
                                 subTitle={item.subTitle}
-                                infoDate={item.infoDate} />
+                                infoDate={item.infoDate}
+                                href={item.href} />
                         )}
                     </Grid>
-                    {/** ====================END TOPRIGHT ARTICLE ========================== */}
+                    {/** ====================END TOPLEFT ARTICLE ========================== */}
 
-                    {/** ====================START TOPLEFT ARTICLE ========================== */}
+                    {/** ====================START TOPRIGHT ARTICLE ========================== */}
                     <Grid item xs={3}>
                         <img style={{
                             width: '100%',
@@ -355,7 +359,7 @@ export default function Home() {
                             <p style={{ fontSize: '13px', opacity: '0.5' }}>On Sex, Solitude, and female friendship</p>
                         </div>
                     </Grid>
-                    {/** ====================END TOPLEFT ARTICLE ========================== */}
+                    {/** ====================END TOPRIGHT ARTICLE ========================== */}
                 </Grid>
             </div>
             {/** ====================END TOP ARTICLE ========================== */}

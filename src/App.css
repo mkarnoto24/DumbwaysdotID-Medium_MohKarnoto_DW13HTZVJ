@@ -16,6 +16,16 @@
 
 }
 
+.textParagraf {
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.listmission li {
+  list-style: none;
+  display: inline-block;
+}
+
 .grow {
   flex-grow: 1;
   text-align: right;
