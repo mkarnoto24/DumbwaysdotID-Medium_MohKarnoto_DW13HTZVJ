@@ -12,7 +12,8 @@ const listMenu = [
     },
     {
         id: 2,
-        name: 'onezero'
+        name: 'onezero',
+        linkto: '/Onezero'
     },
     {
         id: 3,

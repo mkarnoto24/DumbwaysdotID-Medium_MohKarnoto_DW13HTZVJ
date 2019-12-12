@@ -3,8 +3,22 @@
   width: 980px;
 }
 
-.AppCategory {
+.appcontent {
+  margin: 0 auto;
   width: 90%;
+}
+
+.AppMedium {
+
+  margin: 0 auto;
+  width: 100%;
+  flex-grow: 1;
+
+}
+
+.grow {
+  flex-grow: 1;
+  text-align: right;
 }
 
 .App-logo {

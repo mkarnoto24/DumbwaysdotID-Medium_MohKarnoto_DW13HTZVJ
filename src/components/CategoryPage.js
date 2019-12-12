@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Toolbar, Typography, Button, Link, Grid } from '@material-ui/core';
+import { Toolbar, Typography, Button, Grid } from '@material-ui/core';
 import './../App.css';
 import gmbIcon from './icon_medium.jpeg';
 import gbrartikel_onezero1 from './gbrartikel_onezero1.jpeg';
@@ -9,6 +9,7 @@ import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import icononezero from './onezero.jpeg';
 import ArticleCategoryPage from './ArtikelCategoryPage';
 import ArtikelCategoryPageBawah from './ArtikelCategoryPageBawah';
+import { Link } from 'react-router-dom';
 
 const artikelcategorybawah = [
     {
@@ -136,22 +137,18 @@ const menulink = [
     {
         id: 1,
         name: 'About OneZero',
-        href: '/onezero'
     },
     {
         id: 2,
         name: 'About Medium',
-        href: '/medium'
     },
     {
         id: 3,
         name: 'Terms',
-        href: '/terms'
     },
     {
         id: 4,
         name: 'Privacy',
-        href: '/privacy'
     },
 ];
 const artikelcategory = [
@@ -182,7 +179,7 @@ export default class CategoryPage extends Component {
             <div className="AppMedium">
                 {/* ========START TOPBAR AND HEDER ========= */}
                 <Toolbar style={{ boxShadow: '5px 5px 5px grey' }}>
-                    <img src={gmbIcon} alt="icon-medium" />
+                    <Link to="/" ><img src={gmbIcon} alt="icon-medium" /></Link>
                     <div className="grow">
                         <SearchIcon style={{ margin: '0 15px' }}></SearchIcon>
                         <NotificationsNoneIcon style={{ margin: '0 15px' }} />

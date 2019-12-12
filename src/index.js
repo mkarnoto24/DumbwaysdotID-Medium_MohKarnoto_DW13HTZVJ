@@ -12,6 +12,7 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={App} />
+            <Route exact path="/Home" component={App} />
             {/* <Route path="/Regis" component={Regis} />
             <Route path="/Login" component={Login} /> */}
             <Route path="/OneZero" component={OneZero} />
