@@ -74,7 +74,7 @@ export default class ArtikelDetail extends Component {
                                 </p>
                             </div>
                             <Typography variant="h5" style={{ textAlign: 'left' }}>
-                                If You Only Read A Few Books In 2018, Read These</Typography>
+                                If You Only Read A Few Books In 2018, Read These.</Typography>
 
                             <p className='textParagraf'>
                                 If you’d liked to be jerked around less, provoked less, and more productive and inwardly focused, where should you start?
