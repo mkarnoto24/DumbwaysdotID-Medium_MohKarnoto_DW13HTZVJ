@@ -5,7 +5,7 @@
 
 .appcontent {
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 }
 
 .AppMedium {
@@ -36,6 +36,15 @@
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
+
+/* css follow */
+
+.item-tag-follow {
+  background-color: gray;
+  height: 30px;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

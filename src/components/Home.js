@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import SearchIcon from '@material-ui/icons/Search';
@@ -290,8 +290,8 @@ export default function Home() {
                     Medium
                 </Typography>
                 <div className={classes.grow} /><SearchIcon style={{ height: '18px' }}></SearchIcon>
-                <p className={classes.titleright}>Become a Member
-                <span><Link to="#" onClick={handleOpenLogin} style={{
+                <p className={classes.titleright}><Link to='#'>Become a Member</Link>
+                    <span><Link to="#" onClick={handleOpenLogin} style={{
                         cursor: 'pointer',
                     }}> Sign In </Link></span>
                     <Button variant='outlined' color='primary' onClick={handleOpen}> Get Started</Button></p>

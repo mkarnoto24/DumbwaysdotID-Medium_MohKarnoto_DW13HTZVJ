@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+import Follow from './Follow';
 
 export default class ArtikelDetail extends Component {
     render() {
@@ -26,7 +27,7 @@ export default class ArtikelDetail extends Component {
 
                 </Toolbar>
                 <hr style={{ opacity: '0.3' }} />
-                <Toolbar style={{ boxShadow: '5px 5px 4px grey', marginBottom: '40px' }}>
+                <Toolbar style={{ boxShadow: '5px 5px grey', marginBottom: '40px' }}>
                     <div style={{ float: 'left' }} >
                         <ul className='listmission'>
                             <li>
@@ -35,8 +36,12 @@ export default class ArtikelDetail extends Component {
 
                                 }} src={iconmission} alt="icon-mision" />
                             </li>
-                            <li>MISSION ORIGINALS</li>
-                            <li> | SUBSCRIBE</li>
+                            <li style={{ paddingBottom: '30px' }}>MISSION ORIGINALS </li>
+
+                            <li>&nbsp;|&nbsp;</li>
+
+                            <li>  SUBSCRIBE</li>
+
                         </ul>
                     </div>
 
@@ -68,7 +73,7 @@ export default class ArtikelDetail extends Component {
                                 <p style={{ marginLeft: '80px', marginBottom: '50px' }}>Ryan Holiday
                                 <Button
                                         size="small" variant="outlined" color="primary"
-                                        style={{ marginLeft: '10px'}}><span style={{ fontSize: '10px'}}>Follow</span>
+                                        style={{ marginLeft: '10px' }}><span style={{ fontSize: '10px' }}>Follow</span>
                                     </Button><br></br><span style={{ fontSize: '12px', opacity: '0.5' }}>Jun 23 2018. 6 min read</span>
                                     <span style={{ float: 'right', alignContent: 'center', marginBottom: '20px' }}>
                                         <Link><TwitterIcon></TwitterIcon></Link>
@@ -94,6 +99,9 @@ export default class ArtikelDetail extends Component {
                         </div>
                     </Grid>
                 </Grid>
+                <Follow>
+
+                </Follow>
             </div>
 
 
