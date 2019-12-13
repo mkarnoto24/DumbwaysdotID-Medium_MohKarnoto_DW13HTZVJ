@@ -19,6 +19,7 @@
 .textParagraf {
   letter-spacing: 1px;
   font-size: 18px;
+  text-align: justify;
 }
 
 .listmission li {
