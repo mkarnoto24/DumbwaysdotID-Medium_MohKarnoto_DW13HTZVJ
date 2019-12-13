@@ -16,10 +16,11 @@ export default class ArticleKanan extends Component {
                             <span style={{ fontSize: '13px', opacity: '0.4', }}>{this.props.infoDate}</span>
                         </div>
                     </Grid>
-                    <Grid item sm={3}>
+                    <Grid item sm={4}>
                         <img style={{
                             width: '130px',
                             height: '110px',
+                            float: 'right'
 
                         }}
                             src={this.props.img} alt="gbr" />

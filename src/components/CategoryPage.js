@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Toolbar, Typography, Button, Grid } from '@material-ui/core';
 import './../App.css';
-import gmbIcon from './icon_medium.jpeg';
-import gbrartikel_onezero1 from './gbrartikel_onezero1.jpeg';
-import gbrartikel_onezero2 from './gbrartikel_onezero2.jpeg';
+import gmbIcon from './../assets/icon_medium.jpeg';
+import gbrartikel_onezero1 from './../assets/gbrartikel_onezero1.jpeg';
+import gbrartikel_onezero2 from './../assets/gbrartikel_onezero2.jpeg';
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
-import icononezero from './onezero.jpeg';
+import icononezero from './../assets/onezero.jpeg';
 import ArticleCategoryPage from './ArtikelCategoryPage';
 import ArtikelCategoryPageBawah from './ArtikelCategoryPageBawah';
 import { Link } from 'react-router-dom';
