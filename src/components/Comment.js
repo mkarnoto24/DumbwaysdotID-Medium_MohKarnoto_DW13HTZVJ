@@ -38,11 +38,9 @@ export default class Comment extends Component {
                                     </Grid>
                                 </Grid>
                                 <p className="title-text">Ryan Holiday</p>
-                                {/* <p>How To Digest Books Above Your “Level” And Increase Your Intelligence</p>
-                            <p>vhgfus</p> */}
                             </div>
                             <div className="comment-card">
-                                <Card>
+                                <Card className="card">
                                     <CardHeader
                                         avatar={
                                             <Avatar aria-label="recipe" className="{classes.avatar}">
