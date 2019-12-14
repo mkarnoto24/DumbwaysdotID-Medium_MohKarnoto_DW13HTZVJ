@@ -81,7 +81,7 @@ export default class Follow extends Component {
 
                             <hr />
                             <div>
-                                <Button variant="outlined" color="primary" style={{ width: '100%', height: '50px', marginTop: '20px' }}>
+                                <Button href="/comment" variant="outlined" color="primary" style={{ width: '100%', height: '50px', marginTop: '20px' }}>
                                     <span style={{ fontSize: '13px' }}>
                                         See More Response
                                     </span>

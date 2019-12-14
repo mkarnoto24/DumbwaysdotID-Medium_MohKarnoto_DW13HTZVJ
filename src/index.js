@@ -5,6 +5,7 @@ import App from './App';
 import OneZero from './components/CategoryPage';
 import ArtikelDetail from './components/ArtikelDetail';
 import Follow from './components/Follow';
+import Comment from './components/Comment';
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route path="/ArtikelDetail/1" component={ArtikelDetail} />
             {/* <Route path="/Login" component={Login} /> */}
             <Route path="/OneZero" component={OneZero} />
+            <Route path="/comment" component={Comment} />
             {/* <Route path="/CategoryPage" component={CategoryPage} /> */}
         </div>
     </Router>
