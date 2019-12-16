@@ -6,6 +6,9 @@ import OneZero from './components/CategoryPage';
 import ArtikelDetail from './components/ArtikelDetail';
 import Follow from './components/Follow';
 import Comment from './components/Comment';
+import Login from './components/Login';
+import Register from './components/Register';
+import Header from './components/MenuProfile';
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -15,12 +18,16 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path="/" component={App} />
-            <Route exact path="/Home" component={App} />
+            <Route exact path="/home" component={App} />
             <Route exact path="/follow" component={Follow} />
-            <Route path="/ArtikelDetail/1" component={ArtikelDetail} />
+            <Route path="/artikeldetail/1" component={ArtikelDetail} />
             {/* <Route path="/Login" component={Login} /> */}
-            <Route path="/OneZero" component={OneZero} />
+            <Route path="/onezero" component={OneZero} />
             <Route path="/comment" component={Comment} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/menu-header" component={Header} />
+
             {/* <Route path="/CategoryPage" component={CategoryPage} /> */}
         </div>
     </Router>

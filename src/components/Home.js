@@ -12,53 +12,18 @@ import gbrtengah1 from './gbrtengah1.jpg';
 import gbrtengah2 from './gbrtengah2.jpeg';
 import gbrtengah3 from './gbrtengah3.jpeg';
 import gbrkiri from './gbrkiri.jpeg';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
-import gmbrkiri from './kiri.jpeg';
-import gmbrkanan from './kanan.jpeg';
-import TextField from '@material-ui/core/TextField';
 import './style.css';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Category from './Category';
 import ArticleKanan from './ArticleKanan';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import IconButton from '@material-ui/core/IconButton';
+
+
+const menuId = 'primary-search-account-menu';
+
 
 const useStyles = makeStyles(theme => ({
-    modal: {
-        margin: '0',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    paper: {
-        backgroundColor: theme.palette.background.paper,
-        border: '1px solid #000000',
-        width: 800,
-        height: 550,
-        boxShadow: theme.shadows[5],
-        color: theme.palette.text.secondary,
-        display: 'flex'
-    },
-    left: {
-        width: 200,
-    },
-    centermodal: {
-        width: 400,
-        textAlign: 'center'
-    },
-    right: {
-        width: 200,
-    },
-    closeButton: {
 
-        float: 'right',
-        position: 'relative',
-        right: theme.spacing(),
-        top: theme.spacing(),
-        color: theme.palette.grey[500],
-    },
     grow: {
         flexGrow: 1,
     },
@@ -195,7 +160,7 @@ const articles = [
         title: 'Hurt People Will Hurt People. But Healed People Heal People, Too.',
         subTitle: ' Courtney Christine in Human Parts',
         infoDate: 'Feb 19, 2017. 7 min read',
-        href: '/ArtikelDetail/1'
+        href: '/artikeldetail/1'
     },
     {
         id: 2,
@@ -263,38 +228,34 @@ const articlesBawahTengah = [
 
 
 export default function Home() {
-    const [open, setOpen] = React.useState(false);
-    const [openlogin, setOpenLogin] = React.useState(false);
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
-    const handleOpenLogin = () => {
-        setOpenLogin(true);
-    }
-    const handleClose = () => {
-        setOpen(false);
-    };
-    const handleCloseLogin = () => {
-        setOpenLogin(false);
-    };
 
     const classes = useStyles();
 
     return (
         <div className={classes.grow}>
             {/** START HEADER */}
-            <Toolbar>
+            <Toolbar className={classes.styleToolbar}>
                 <Typography className={classes.title} variant="h5" noWrap>
                     Medium
                 </Typography>
                 <div className={classes.grow} /><SearchIcon style={{ height: '18px' }}></SearchIcon>
                 <p className={classes.titleright}><Link to='#'>Become a Member</Link>
-                    <span><Link to="#" onClick={handleOpenLogin} style={{
-                        cursor: 'pointer',
+                    <span><Link to="/login" style={{
+                        cursor: 'pointer', margin: '0 10px'
                     }}> Sign In </Link></span>
-                    <Button variant='outlined' color='primary' onClick={handleOpen}> Get Started</Button></p>
+                    <Button variant='outlined' href="/register" color='primary'>
+                        <span style={{ fontSize: '12px' }}>Get Started</span>
+                    </Button></p>
+                <IconButton
+                    edge="end"
+                    aria-label="account of current user"
+                    aria-controls={menuId}
+                    aria-haspopup="true"
+                    color="inherit"
+                >
+                    <AccountCircle />
+                </IconButton>
             </Toolbar>
             {/** END HEADER */}
 
@@ -423,116 +384,6 @@ export default function Home() {
                 </Grid>
             </div>
             {/** ====================END MAIN ARTICLE ========================== */}
-            {/** ====================START REGISTER MODAL ========================== */}
-            <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
-                className={classes.modal}
-                open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
-            >
-                <Fade in={open}>
-
-                    <div className={classes.root}>
-                        <div className={classes.paper}>
-                            <div className={classes.left}>
-                                <img src={gmbrkiri} alt="logo" style={{ height: '90%' }} />
-                            </div>
-                            <div className={classes.centermodal}>
-                                <h1 id="transition-modal-title">Join Medium</h1>
-                                <p id="transition-modal-description" style={{ textAlign: 'justify' }}>Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.</p>
-                                <form className={classes.root} noValidate autoComplete="off">
-                                    <TextField id="standard-basic" label="Your Username" /><br />
-                                    <TextField
-                                        label="Your Password"
-                                        type="password"
-                                        autoComplete="current-password"
-                                    /><br />
-                                    <TextField
-                                        label="Your Email"
-                                        type="email"
-                                    /><br />
-                                    <Button style={{ marginTop: '10px' }} variant="contained" color="primary">
-                                        Registration
-                            </Button>
-
-                                </form>
-                                <p>Already have an account? <Link onClick={handleOpenLogin} style={{ cursor: 'pointer' }}>
-                                    Sign In</Link></p>
-                                <p>
-                                    To make Medium work, we log user data and share it with service providers. Click “Sign Up” above to accept Medium’s <Link to="#">Terms of Service</Link> & <Link to="#">Privacy Policy</Link>.
-                            </p>
-                            </div>
-                            <div className={classes.right}>
-                                <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
-                                    <CloseIcon />
-                                </IconButton>
-                                <img src={gmbrkanan} alt="logo" style={{ width: '100%', posiotion: 'static' }} />
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </Fade>
-            </Modal>
-            {/** ====================END REGISTER MODAL ========================== */}
-
-            {/** ====================START MODAL LOGIN ========================== */}
-            <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
-                className={classes.modal}
-                open={openlogin}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
-            >
-                <Fade in={openlogin}>
-                    <div className={classes.paper}>
-                        <div className={classes.left}>
-
-                        </div>
-                        <div className={classes.centermodal}>
-
-                            <h2 style={{ paddingBottom: '1px' }} id="transition-modal-title">Sign In with email</h2>
-
-                            <p id="transition-modal-description" className={classes.txtkecil}>
-                                Enter the email address associated with your account, and we'll send a magic link to your inbox.
-                            </p>
-                            <form>
-                                <TextField
-                                    label="Your Password"
-                                    type="password"
-                                    autoComplete="current-password"
-                                /><br />
-                                <TextField
-                                    label="Your Email"
-                                    type="email"
-                                /><br />
-                                <Button className={classes.btn}><span className={classes.bntspan}>Continue</span></Button>
-                            </form>
-                            <p>
-                                <Link to="#" className={classes.signoption}><span><ArrowBackIosIcon fontSize="small" />All Sign In option</span></Link>
-                            </p>
-                        </div>
-                        <div className={classes.right}>
-                            <IconButton aria-label="close" className={classes.closeButton} onClick={handleCloseLogin}>
-                                <CloseIcon />
-                            </IconButton>
-                        </div>
-                    </div>
-                </Fade>
-            </Modal>
-            {/** ====================END MODAL LOGIN ========================== */}
         </div >
     );
 }

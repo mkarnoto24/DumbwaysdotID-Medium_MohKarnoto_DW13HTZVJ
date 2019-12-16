@@ -100,7 +100,7 @@ export default class Category extends Component {
         const menu = this.menuItems;
         return (
             <div className="AppCategory">
-                <ScrollMenu
+                <ScrollMenu position="sticky"
                     data={menu}
                     arrowLeft={ArrowLeft}
                     arrowRight={ArrowRight}

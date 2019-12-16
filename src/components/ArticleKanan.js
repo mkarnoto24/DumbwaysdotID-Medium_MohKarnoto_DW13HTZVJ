@@ -20,6 +20,7 @@ export default class ArticleKanan extends Component {
                         <img style={{
                             width: '130px',
                             height: '110px',
+                            float: 'right'
                         }}
                             src={this.props.img} alt="gbr" />
                     </Grid>

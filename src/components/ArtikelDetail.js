@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppBar, Toolbar, Typography, Button, Grid, Avatar } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button, Avatar } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
@@ -12,8 +12,6 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import Follow from './Follow';
-import RelatedArticle from './RelatedArticle1';
-import Header from './layout/Header';
 import './../App.css';
 import RelatedArticle1 from './RelatedArticle1';
 
@@ -26,7 +24,8 @@ export default class ArtikelDetail extends Component {
                 <AppBar color="white" position="static">
                     <Toolbar style={{ margin: '0 auto', width: '84%' }}>
                         <Typography variant="h5" className="title">
-                            <img src={gmbIcon} alt="logo-medium" style={{ marginTop: '15px', height: '40px' }} />
+                            <Link to="/">
+                                <img src={gmbIcon} alt="logo-medium" style={{ marginTop: '15px', height: '40px' }} /></Link>
                         </Typography>
                         <SearchIcon></SearchIcon>
                         <NotificationsNoneIcon style={{ margin: '0 15px' }}></NotificationsNoneIcon>
