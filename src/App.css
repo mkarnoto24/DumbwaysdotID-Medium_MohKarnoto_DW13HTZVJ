@@ -35,6 +35,11 @@
   text-align: right;
 }
 
+.btn-tag {
+  margin: 0 auto;
+  width: 50%
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -91,6 +96,169 @@
   margin: 10px;
   padding: 10px;
   cursor: pointer;
+}
+
+/* ======== CSS FOR ARTICLE DETAIL */
+.lismenu-header {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.lismenu-header li {
+  display: inline;
+}
+
+
+/* ======== CSS FOR RELATED ARTICLE ======== */
+.root-related-article {
+  background-color: #f8f8f8;
+}
+
+.body-related-article {
+  margin-top: 20px;
+}
+
+.div-related-tag {
+  width: 40%;
+  padding: 10px;
+}
+
+.title-related-article {
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.img-related-tag {
+  width: 100%;
+  height: 240px;
+}
+
+.right-title {
+  margin-top: 12px;
+
+}
+
+.container-tag {
+  flex-direction: 'column';
+  margin: 0 auto;
+  display: flex;
+  width: 81%;
+}
+
+
+.text-more-frommedium {
+  padding-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.line-related-article {
+  margin-bottom: 40px;
+}
+
+.footer-related-article {
+
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+}
+
+.body-footer {
+  flex-direction: 'column';
+}
+
+.container-footer {
+  width: 100%;
+  padding: 10px;
+}
+
+.footer-content {
+  margin: 0 auto;
+  color: white;
+}
+
+.listmenu-footer {
+  list-style: none;
+}
+
+.listmenu-footer li {
+  margin: 5px;
+  float: right;
+}
+
+/* ===== CSS FOR COMMENT CARD ===== */
+.header {
+  background-color: white;
+  width: 100%;
+}
+
+.resume-comment {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.box-resume {
+  margin: 0 auto;
+  border: 1px solid #ececeb;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.text-resume {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.title-grid {
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.title-text {
+  margin-left: 20px;
+  font-size: 13px;
+  margin-top: -12px;
+  opacity: 0.5;
+}
+
+.text-content-card {
+  text-align: 'justify';
+  margin-top: '0';
+  font-size: '14px';
+}
+
+.btn-upgrade {
+  font-size: 11px;
+  text-transform: initial;
+}
+
+.comment-card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+  background-color: #f9f6f7;
+
+}
+
+.article-img {
+  display: 'flex';
+  flex-direction: 'column';
+  margin: '0 auto';
+  width: '40%',
+}
+
+.btn-tag {
+  margin: '0 auto';
+  width: '50%'
 }
 
 /* @keyframes App-logo-spin {

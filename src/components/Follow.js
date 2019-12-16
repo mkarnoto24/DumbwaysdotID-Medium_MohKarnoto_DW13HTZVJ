@@ -11,28 +11,66 @@ export default class Follow extends Component {
     render() {
         return (
             <div>
-                <Grid container={1} spacing={2}>
-                    <Grid item xs={2}>
+                <div className="btn-tag">
+                    <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Books</Button>
+                    <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Self Improvement</Button>
+                    <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Prouctivity</Button>
+                    <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Life</Button>
+                    <Button style={{ fontSize: '12px' }} variant="contained" color="default">Life Lessons</Button>
+                    <div>
+                        <Avatar style={{ float: 'left', width: '50px', height: '50px' }}
+                            alt="Ted talk"
+                            src="https://pbs.twimg.com/profile_images/877631054525472768/Xp5FAPD5_reasonably_small.jpg"
+                        ></Avatar>
+                        <div><p style={{ marginLeft: '70px', paddingTop: '12px', marginBottom: '50px' }}><strong>54k claps</strong>
+                            <span style={{ float: 'right', alignContent: 'center', marginBottom: '20px' }}>
+                                <Link><TwitterIcon></TwitterIcon></Link>
+                                <Link><FacebookIcon style={{ margin: '0 8px' }}></FacebookIcon></Link>
+                                <Link><BookmarkBorderIcon>
 
-                    </Grid>
-                    <Grid item xs={7} style={{ margin: '0 auto' }}>
-                        <Grid container={1} spacing={2}>
-                            <Grid item xs={9}>
-                                <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Books</Button>
-                                <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Self Improvement</Button>
-                                <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Prouctivity</Button>
-                                <Button style={{ marginRight: '5px', fontSize: '12px' }} variant="contained" color="default">Life</Button>
-                                <Button style={{ fontSize: '12px' }} variant="contained" color="default">Life Lessons</Button>
+                                </BookmarkBorderIcon>
+                                </Link>
+                                <Link><MoreHorizIcon style={{ marginLeft: '8px' }} /></Link>
+                            </span>
+                        </p></div>
+                        <hr style={{ opacity: '0.5' }}></hr>
+                        <div style={{ width: '100%' }}>
 
-                            </Grid>
-                            <Grid item xs={3}>
 
-                            </Grid>
+                            <div style={{ margin: '50px 0' }}>
+                                <Avatar style={{ float: 'left', width: '70px', height: '70px' }}
+                                    alt="Ted talk"
+                                    src="https://pbs.twimg.com/profile_images/877631054525472768/Xp5FAPD5_reasonably_small.jpg"
+                                ></Avatar>
+                                <p style={{ marginLeft: '80px', marginTop: '40px' }}>Ryan Holiday
+                                <br></br><span style={{ fontSize: '12px', opacity: '0.5' }}>Jun 23 2018. 6 min read</span>
+                                    <span style={{ float: 'right', alignContent: 'center', paddingBottom: '25px' }}>
+                                        <Button
+                                            size="small" variant="outlined" color="primary"
+                                            style={{ marginLeft: '10px' }}><span style={{ fontSize: '13px' }}>Follow</span>
+                                        </Button>
 
-                        </Grid>
-                    </Grid>
-                </Grid>
 
+                                    </span>
+                                </p>
+                                <p style={{ marginLeft: '80px' }}>Product Designer and Manager</p>
+
+                            </div>
+
+                            <hr />
+                            <div>
+                                <Button href="/comment" variant="outlined" color="primary" style={{ width: '100%', height: '50px', marginTop: '20px' }}>
+                                    <span style={{ fontSize: '13px' }}>
+                                        See More Response (215)
+                                    </span>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 
+                
                 <Grid container={1} spacing={2}>
                     <Grid item xs={2}>
 
@@ -90,7 +128,7 @@ export default class Follow extends Component {
                         </div>
                     </Grid>
 
-                </Grid>
+                </Grid> */}
 
             </div >
         );
