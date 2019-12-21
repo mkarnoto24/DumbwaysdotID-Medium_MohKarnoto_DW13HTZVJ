@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
 
 }))
 
-function ProfilButton() {
+export function ProfilButton() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 

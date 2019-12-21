@@ -10,6 +10,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Header from './components/Header';
 import Story from './components/Story';
+import Profile from './components/Profile';
+import NewStory from './components/NewStory';
 import Test from './test';
 
 import * as serviceWorker from './serviceWorker';
@@ -25,13 +27,14 @@ ReactDOM.render(
             <Route path="/artikeldetail/1" component={ArtikelDetail} />
             {/* <Route path="/Login" component={Login} /> */}
             <Route path="/onezero" component={OneZero} />
-            <Route path="/programming" component={OneZero} />
             <Route path="/comment" component={Comment} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/header" component={Header} />
             <Route path="/test" component={Test} />
             <Route path="/story" component={Story} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/new-story" component={NewStory} />
 
             {/* <Route path="/CategoryPage" component={CategoryPage} /> */}
         </div>
