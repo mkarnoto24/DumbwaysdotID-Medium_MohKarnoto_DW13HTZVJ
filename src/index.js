@@ -9,6 +9,7 @@ import Comment from './components/Comment';
 import Login from './components/Login';
 import Register from './components/Register';
 import Header from './components/Header';
+import Story from './components/Story';
 import Test from './test';
 
 import * as serviceWorker from './serviceWorker';
@@ -30,6 +31,7 @@ ReactDOM.render(
             <Route path="/register" component={Register} />
             <Route path="/header" component={Header} />
             <Route path="/test" component={Test} />
+            <Route path="/story" component={Story} />
 
             {/* <Route path="/CategoryPage" component={CategoryPage} /> */}
         </div>
