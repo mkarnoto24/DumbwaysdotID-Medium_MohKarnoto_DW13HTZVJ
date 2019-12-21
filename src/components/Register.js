@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import gmbrkiri from './kiri.jpeg';
-import gmbrkanan from './kanan.jpeg';
+import gmbrkiri from './assets/kiri.jpeg';
+import gmbrkanan from './assets/kanan.jpeg';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import './style.css';

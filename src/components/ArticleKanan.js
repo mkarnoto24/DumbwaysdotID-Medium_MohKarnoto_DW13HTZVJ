@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 export default class ArticleKanan extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class ArticleKanan extends Component {
                 <Grid container spacing={2}>
                     <Grid item sm={8}>
                         <div>
-                            <span><h3 style={{ margin: '0' }}>{this.props.title}</h3></span>
+                            <span><Link className="text-url" to={this.props.url}><h3 style={{ margin: '0' }}>{this.props.title}</h3></Link></span>
                             <span style={{ fontSize: '13px', opacity: '0.4', }}>{this.props.subTitle}</span><p></p>
                         </div>
                         <div>

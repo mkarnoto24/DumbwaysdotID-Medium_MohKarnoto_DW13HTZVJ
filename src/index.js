@@ -8,7 +8,8 @@ import Follow from './components/Follow';
 import Comment from './components/Comment';
 import Login from './components/Login';
 import Register from './components/Register';
-import Header from './components/MenuProfile';
+import Header from './components/Header';
+import Test from './test';
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -23,10 +24,12 @@ ReactDOM.render(
             <Route path="/artikeldetail/1" component={ArtikelDetail} />
             {/* <Route path="/Login" component={Login} /> */}
             <Route path="/onezero" component={OneZero} />
+            <Route path="/programming" component={OneZero} />
             <Route path="/comment" component={Comment} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/menu-header" component={Header} />
+            <Route path="/header" component={Header} />
+            <Route path="/test" component={Test} />
 
             {/* <Route path="/CategoryPage" component={CategoryPage} /> */}
         </div>

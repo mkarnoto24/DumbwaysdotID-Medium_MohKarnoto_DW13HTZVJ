@@ -4,8 +4,6 @@
 
 }
 
-
-
 .appcontent {
   margin: 0 auto;
   width: 80%;
@@ -28,6 +26,10 @@
 .listmission li {
   list-style: none;
   display: inline-block;
+}
+
+.text-url {
+  text-decoration: none;
 }
 
 .grow {

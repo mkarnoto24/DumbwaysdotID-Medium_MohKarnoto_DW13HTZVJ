@@ -1,61 +1,11 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import './../App.css'
 
-const listMenu = [
-    {
-        id: 1,
-        name: 'home',
-        linkto: '/Home'
-    },
-    {
-        id: 2,
-        name: 'onezero',
-        linkto: '/Onezero'
-    },
-    {
-        id: 3,
-        name: 'elemental'
-    },
-    {
-        id: 4,
-        name: 'gen'
-    },
-    {
-        id: 5,
-        name: 'zora'
-    },
-    {
-        id: 6,
-        name: 'forge'
-    },
-    {
-        id: 7,
-        name: 'human parts'
-    },
-    {
-        id: 8,
-        name: 'marker'
-    },
-    {
-        id: 9,
-        name: 'level'
-    },
-    {
-        id: 10,
-        name: 'heated'
-    },
-    {
-        id: 11,
-        name: 'modus'
-    },
-    {
-        id: 12,
-        name: 'more'
-    },
-];
+
 
 const MenuItem = ({ text, selected }) => {
     return <div
@@ -63,10 +13,10 @@ const MenuItem = ({ text, selected }) => {
     >{text}</div>;
 };
 
-export const Menu = (listMenu, selected) =>
-    listMenu.map(el => {
-        const { name, linkto } = el;
-        return <Link to={linkto}><MenuItem text={name} key={name} selected={selected} /></Link>
+export const Menu = (list, selected) =>
+    list.map(el => {
+        const { name, id } = el;
+        return <Link className="text-url" to={name.toString().toLowerCase() + "?id=" + id}><MenuItem text={name} key={name} selected={selected} /></Link>
     })
 
 
@@ -86,22 +36,34 @@ const selected = 'home';
 export default class Category extends Component {
     constructor(props) {
         super(props);
-        this.menuItems = Menu(listMenu, selected);
+        //this.menuItems = Menu(listMenu, selected);
+        this.state = {
+            list: [],
+            selected,
+            transition: 1,
+        }
     }
-    state = {
-        selected,
-        transition: 1,
-    };
+    ;
+    componentDidMount() {
+        axios.get(`http://localhost:4000/api/v1/categories`).then(res => {
+            // this.setState({categories: res.data})
+            console.log(res)
+            this.setState({ list: res.data })
+        })
+    }
     onSelect = key => {
         this.setState({ selected: key });
     }
+
+
     render() {
-        const { selected } = this.state;
-        const menu = this.menuItems;
+
+        const { list, selected } = this.state;
+        //const menu = this.menuItems;
         return (
             <div className="AppCategory">
                 <ScrollMenu position="sticky"
-                    data={menu}
+                    data={Menu(list, selected)}
                     arrowLeft={ArrowLeft}
                     arrowRight={ArrowRight}
                     selected={selected}

@@ -3,7 +3,7 @@ import './../App.css';
 import { Typography, Avatar } from '@material-ui/core';
 import iconClaps from './layout/icon_clap.png';
 import BookmarkBorderSharpIcon from '@material-ui/icons/BookmarkBorderSharp';
-import gbr from './gbrtengah3.jpeg';
+import gbr from './assets/gbrtengah3.jpeg';
 import { Link } from '@material-ui/core';
 
 
