@@ -14,6 +14,7 @@ import Profile from './components/Profile';
 import NewStory from './components/NewStory';
 import Bookmarks from './components/Bookmarks';
 import Stats from '../src/components/stats/Stats';
+import ArticleByPerson from '../src/components/articleByPerson/ArticleByPerson';
 import Test from './test';
 
 import * as serviceWorker from './serviceWorker';
@@ -39,6 +40,7 @@ ReactDOM.render(
             <Route path="/new-story" component={NewStory} />
             <Route path="/bookmarks" component={Bookmarks} />
             <Route path="/stats" component={Stats} />
+            <Route path="/article-by-person" component={ArticleByPerson} />
 
             {/* <Route path="/CategoryPage" component={CategoryPage} /> */}
         </div>
